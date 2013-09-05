@@ -1,5 +1,5 @@
 (function(window){
-  window.withjQuery = function(){
+  window.withjQuery = function($){
     $('.gh-grabber, .gh-issue-field.gh-issue-field-text.gh-issue-corner').remove();
     $('.gh-issue')
       .css('margin-bottom','20px')
@@ -14,7 +14,7 @@
     $('.gh-issue-key').css('font-size','28px');
     $('table.gh-print-page td').css('padding','0px');
   }
-  window.withjQueryUI = function(){
+  window.withjQueryUI = function($){
     var cssText = '<style type=\'text/css\'>'
     + '.ui-selectable .ui-selecting {background: #ccc;}'
     + '.ui-selected .gh-issue-inner .gh-subhead {background: yellow;}'
