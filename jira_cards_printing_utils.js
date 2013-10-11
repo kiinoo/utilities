@@ -33,27 +33,27 @@
     function setupDDS (ds, dr, dp) {
       dp = dp || {};
       $(ds)
-        .on('mousedown', md)
-        .on('mouseup', mu)
-        .draggable({cursor: 'move', start: hDragS, opacity: 0.5});
+        .on('mousedown', mouseDown)
+        .on('mouseup', mouseUp)
+        .draggable({cursor: 'move', start: hDragStart, opacity: 0.5});
       $(dr).droppable({
-          drop: hDropE,
+          drop: hDropEnd,
           tolerance: 'touch',
           hoverClass: 'drop-hover',
           activeClass: 'ui-state-highlight'
       });
-      function md() {
+      function mouseDown() {
         dragged = false;
       }
-      function mu() {
+      function mouseUp() {
         if(!dragged) {
           $(this).toggleClass('ui-selected');
         }
       }
-      function hDragS (event, ui) {
+      function hDragStart (event, ui) {
         dragged = true;
       }
-      function hDropE (event, ui) {
+      function hDropEnd (event, ui) {
         var options = {of: $(this)};
         $.extend(options, dp);
         ui.draggable.position(options);
