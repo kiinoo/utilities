@@ -35,7 +35,7 @@
       $(ds)
         .on('mousedown', mouseDown)
         .on('mouseup', mouseUp)
-        .draggable({cursor: 'move', start: hDragStart, opacity: 0.5});
+        .draggable({cursor: 'move', start: hDragStart, opacity: 0.5, helper: "clone"});
       $(dr).droppable({
           drop: hDropEnd,
           tolerance: 'touch',
