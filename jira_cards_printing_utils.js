@@ -1,6 +1,5 @@
 (function(window){
   window.withjQuery = function($){
-    $('.gh-grabber, .gh-issue-field.gh-issue-field-text.gh-issue-corner').remove();
     $('.gh-issue')
       .css('margin-bottom','20px')
       .css('margin-left','5px')
@@ -30,13 +29,13 @@
       $('#menu').menu();
     });
     setupDDS('.gh-issue', '.gh-issue-print tr > td', {my: 'left+4 top', at: 'left top'});
-    function setupDDS (ds, dr, dp) {
-      dp = dp || {};
-      $(ds)
+    function setupDDS (draggableSelector, droppableSelector, dropPosition) {
+      dropPosition = dropPosition || {};
+      $(draggableSelector)
         .on('mousedown', mouseDown)
         .on('mouseup', mouseUp)
-        .draggable({cursor: 'move', start: hDragStart, opacity: 0.5});
-      $(dr).droppable({
+        .draggable({cursor: 'move', start: hDragStart, opacity: 0.5, helper: 'clone'});
+      $(droppableSelector).droppable({
           drop: hDropEnd,
           tolerance: 'touch',
           hoverClass: 'drop-hover',
@@ -55,7 +54,7 @@
       }
       function hDropEnd (event, ui) {
         var options = {of: $(this)};
-        $.extend(options, dp);
+        $.extend(options, dropPosition);
         ui.draggable.position(options);
         ui.draggable.element = $(this);
       }
