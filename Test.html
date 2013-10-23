@@ -1,0 +1,535 @@
+﻿
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>xx</title>
+<!--  <script type="text/javascript" src="lib/jquery.js"></script>
+  <script type="text/javascript" src="lib/underscore.js"></script>
+  <script type="text/javascript" src="lib/backbone.js"></script>
+  <script type="text/javascript" src="Backbone.ModelBinder.js"></script>
+  <script type="text/javascript" src="Backbone.CollectionBinder.js"></script> -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.0.0/backbone-min.js"></script>
+<script type="text/javascript" src="https://rawgithub.com/theironcook/Backbone.ModelBinder/master/Backbone.ModelBinder.js"></script>
+<script type="text/javascript" src="https://rawgithub.com/theironcook/Backbone.ModelBinder/master/Backbone.CollectionBinder.js"></script>
+
+  <script type="text/javascript">
+
+  function start(){
+    Backbone.CollectionBinder.prototype.copyViewValuesToModel = function(){
+      var parentEl = $(this._elManagerFactory._getParentEl());
+      var children = parentEl.children();
+      for (var ii = 0; ii < children.length; ii++) {
+        var child = children[ii];
+        var model = new Backbone.Model();
+        var binder = new Backbone.ModelBinder();
+        binder.bind(model, child, this._options);
+        binder.copyViewValuesToModel();
+        this._collection.models.push(model);
+      };
+    };
+
+    Backbone.ModelBinder.prototype._isElUserEditable = function (el) {
+      return true;
+    }
+    window.ems = new Backbone.Collection([]);
+    var rowHtml = '<tr><td data-name="firstName"></td><td data-name="lastName"></td><td data-name="phone"></td></tr>';
+    var elManagerFactory = new Backbone.CollectionBinder.ElManagerFactory(rowHtml, "data-name");
+    collectionBinder = new Backbone.CollectionBinder(elManagerFactory, {date:'>:nth-child(1)', orgnization:'>:nth-child(2)', researcher:'>:nth-child(2)', lastYear:'>:nth-child(3)', thisYear: '>:nth-child(4)', nextYear:'>:nth-child(5)', next2Year:'>:nth-child(6)', next3Year:'>:nth-child(7)', next4Year:'>:nth-child(8)', evaluation:'>:nth-child(9)'});
+    Backbone.ModelBinder.SetOptions({initialCopyDirection: Backbone.ModelBinder.Constants.ViewToModel});
+    collectionBinder.bind(window.ems, jQuery('#report-ylyc-cont1 tbody'));
+    collectionBinder.copyViewValuesToModel();
+  }
+
+  jQuery(document).ready(function(){
+
+  });
+  </script>
+</head>
+<body>
+<div id="report-ylyc-cont1">
+<a href="javascript:start();">开始！</a>
+
+            <table cellspacing="0" cellpadding="0" border="0" style="width:100%;" class="t1 w933">
+            <thead class="h24">
+                <tr>
+                <th width="100px">日期</th>
+                <th width="100px">机构</th>
+                    <th>研究员</th>
+                <th width="80px">2012<i style="background:url(http://hqres.eastmoney.com/EMQuote_A_Center/images/faq.png) no-repeat 0 0" title="预测数据根据各机构发布的研报报告摘录所得，与本网站立场无关；
+2011每股收益为经最新总股本计算所得">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i></th>
+                <th width="80px">2013预测</th>
+                <th width="80px">2014预测</th>
+                <th width="80px">2015预测</th>
+                <th width="80px">2016预测</th>
+                <th width="80px">2017预测</th>
+                   <th width="80px">评级</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <td>2013-09-23
+                </td><td>德邦证券
+                    </td><td><div style="overflow:hidden;height:18px;">郑一宁</div>
+                </td><td>0.52
+                </td><td>0.82
+                </td><td>1.04
+                </td><td>1.31
+                </td><td>--
+                </td><td>--
+                    </td><td>买入
+              </td></tr>
+                <tr>
+                <td>2013-09-05
+                </td><td>国泰君安
+                    </td><td><div style="overflow:hidden;height:18px;">李秋实,张一甫,李少思</div>
+                </td><td>0.52
+                </td><td>0.7737
+                </td><td>0.9423
+                </td><td>1.101
+                </td><td>--
+                </td><td>--
+                    </td><td>买入
+              </td></tr>
+                <tr>
+                <td>2013-08-16
+                </td><td>长城证券
+                    </td><td><div style="overflow:hidden;height:18px;">姚雯琦</div>
+                </td><td>0.52
+                </td><td>0.7935
+                </td><td>0.9721
+                </td><td>1.1308
+                </td><td>--
+                </td><td>--
+                    </td><td>增持
+              </td></tr>
+                <tr>
+                <td>2013-08-15
+                </td><td>长江证券
+                    </td><td><div style="overflow:hidden;height:18px;">刘舒畅</div>
+                </td><td>0.52
+                </td><td>0.7935
+                </td><td>1.0415
+                </td><td>1.349
+                </td><td>--
+                </td><td>--
+                    </td><td>增持
+              </td></tr>
+                <tr>
+                <td>2013-08-15
+                </td><td>东方证券
+                    </td><td><div style="overflow:hidden;height:18px;">李淑花</div>
+                </td><td>0.52
+                </td><td>0.7737
+                </td><td>0.982
+                </td><td>1.2002
+                </td><td>--
+                </td><td>--
+                    </td><td>增持
+              </td></tr>
+                <tr>
+                <td>2013-08-15
+                </td><td>兴业证券
+                    </td><td><div style="overflow:hidden;height:18px;">徐佳熹,项军</div>
+                </td><td>0.52
+                </td><td>0.7538
+                </td><td>0.8729
+                </td><td>1.0216
+                </td><td>--
+                </td><td>--
+                    </td><td>增持
+              </td></tr>
+                <tr>
+                <td>2013-08-15
+                </td><td>联讯证券
+                    </td><td><div style="overflow:hidden;height:18px;">罗柏言</div>
+                </td><td>0.52
+                </td><td>0.7638
+                </td><td>1.0514
+                </td><td>1.2696
+                </td><td>--
+                </td><td>--
+                    </td><td>增持
+              </td></tr>
+                <tr>
+                <td>2013-08-15
+                </td><td>中信建投
+                    </td><td><div style="overflow:hidden;height:18px;">吴斌</div>
+                </td><td>0.52
+                </td><td>0.7737
+                </td><td>0.9225
+                </td><td>1.0911
+                </td><td>--
+                </td><td>--
+                    </td><td>增持
+              </td></tr>
+                <tr>
+                <td>2013-08-15
+                </td><td>中山证券
+                    </td><td><div style="overflow:hidden;height:18px;">林兴秋</div>
+                </td><td>0.52
+                </td><td>0.734
+                </td><td>0.9324
+                </td><td>1.22
+                </td><td>--
+                </td><td>--
+                    </td><td>
+              </td></tr>
+                <tr>
+                <td>2013-08-14
+                </td><td>招商证券
+                    </td><td><div style="overflow:hidden;height:18px;">李珊珊,徐列海,张同,杨烨辉</div>
+                </td><td>0.52
+                </td><td>0.7638
+                </td><td>0.9621
+                </td><td>1.1804
+                </td><td>--
+                </td><td>--
+                    </td><td>增持
+              </td></tr>
+                <tr>
+                <td>2013-08-14
+                </td><td>华创证券
+                    </td><td><div style="overflow:hidden;height:18px;">廖万国,张伟光</div>
+                </td><td>0.52
+                </td><td>0.7538
+                </td><td>0.9225
+                </td><td>1.0812
+                </td><td>--
+                </td><td>--
+                    </td><td>增持
+              </td></tr>
+                <tr>
+                <td>2013-07-31
+                </td><td>长江证券
+                    </td><td><div style="overflow:hidden;height:18px;">刘舒畅,邹朋</div>
+                </td><td>0.52
+                </td><td>0.7935
+                </td><td>1.0415
+                </td><td>1.349
+                </td><td>--
+                </td><td>--
+                    </td><td>增持
+              </td></tr>
+                <tr>
+                <td>2013-07-31
+                </td><td>东方证券
+                    </td><td><div style="overflow:hidden;height:18px;">李淑花</div>
+                </td><td>0.52
+                </td><td>0.7737
+                </td><td>0.982
+                </td><td>1.2002
+                </td><td>--
+                </td><td>--
+                    </td><td>增持
+              </td></tr>
+                <tr>
+                <td>2013-07-25
+                </td><td>光大证券
+                    </td><td><div style="overflow:hidden;height:18px;">姚杰,江维娜</div>
+                </td><td>0.52
+                </td><td>0.8034
+                </td><td>1.0117
+                </td><td>1.3291
+                </td><td>--
+                </td><td>--
+                    </td><td>买入
+              </td></tr>
+                <tr>
+                <td>2013-07-21
+                </td><td>华创证券
+                    </td><td><div style="overflow:hidden;height:18px;">廖万国,张伟光</div>
+                </td><td>0.52
+                </td><td>0.7538
+                </td><td>0.9225
+                </td><td>1.0812
+                </td><td>--
+                </td><td>--
+                    </td><td>增持
+              </td></tr>
+                <tr>
+                <td>2013-07-19
+                </td><td>国金证券
+                    </td><td><div style="overflow:hidden;height:18px;">李敬雷,黄挺,叶苏</div>
+                </td><td>0.52
+                </td><td>0.8114
+                </td><td>1.0693
+                </td><td>1.3926
+                </td><td>--
+                </td><td>--
+                    </td><td>买入
+              </td></tr>
+                <tr>
+                <td>2013-07-18
+                </td><td>国都证券
+                    </td><td><div style="overflow:hidden;height:18px;">刘苗</div>
+                </td><td>0.52
+                </td><td>0.734
+                </td><td>1.0216
+                </td><td>1.3291
+                </td><td>--
+                </td><td>--
+                    </td><td>买入
+              </td></tr>
+                <tr>
+                <td>2013-07-15
+                </td><td>国金证券
+                    </td><td><div style="overflow:hidden;height:18px;">李敬雷,黄挺</div>
+                </td><td>0.52
+                </td><td>0.8114
+                </td><td>1.0693
+                </td><td>1.3926
+                </td><td>--
+                </td><td>--
+                    </td><td>买入
+              </td></tr>
+                <tr>
+                <td>2013-07-10
+                </td><td>东方证券
+                    </td><td><div style="overflow:hidden;height:18px;">李淑花</div>
+                </td><td>0.52
+                </td><td>0.7737
+                </td><td>0.982
+                </td><td>1.2002
+                </td><td>--
+                </td><td>--
+                    </td><td>增持
+              </td></tr>
+                <tr>
+                <td>2013-06-21
+                </td><td>国金证券
+                    </td><td><div style="overflow:hidden;height:18px;">李敬雷,黄挺</div>
+                </td><td>0.52
+                </td><td>0.8114
+                </td><td>1.0693
+                </td><td>1.3926
+                </td><td>--
+                </td><td>--
+                    </td><td>买入
+              </td></tr>
+                <tr>
+                <td>2013-06-20
+                </td><td>华创证券
+                    </td><td><div style="overflow:hidden;height:18px;">廖万国,张伟光</div>
+                </td><td>0.52
+                </td><td>0.7538
+                </td><td>0.9225
+                </td><td>1.0812
+                </td><td>--
+                </td><td>--
+                    </td><td>增持
+              </td></tr>
+                <tr>
+                <td>2013-05-30
+                </td><td>东方证券
+                    </td><td><div style="overflow:hidden;height:18px;">李淑花</div>
+                </td><td>0.52
+                </td><td>0.7737
+                </td><td>0.982
+                </td><td>1.2002
+                </td><td>--
+                </td><td>--
+                    </td><td>增持
+              </td></tr>
+                <tr>
+                <td>2013-05-29
+                </td><td>国金证券
+                    </td><td><div style="overflow:hidden;height:18px;">李敬雷,黄挺</div>
+                </td><td>0.52
+                </td><td>0.8114
+                </td><td>1.0693
+                </td><td>1.3926
+                </td><td>--
+                </td><td>--
+                    </td><td>买入
+              </td></tr>
+                <tr>
+                <td>2013-05-29
+                </td><td>中信建投
+                    </td><td><div style="overflow:hidden;height:18px;">吴斌,张明芳</div>
+                </td><td>0.52
+                </td><td>0.7737
+                </td><td>0.9225
+                </td><td>1.0911
+                </td><td>--
+                </td><td>--
+                    </td><td>增持
+              </td></tr>
+                <tr>
+                <td>2013-05-28
+                </td><td>国泰君安
+                    </td><td><div style="overflow:hidden;height:18px;">沈莉,王稹</div>
+                </td><td>0.52
+                </td><td>0.7439
+                </td><td>0.8927
+                </td><td>1.0712
+                </td><td>--
+                </td><td>--
+                    </td><td>
+              </td></tr>
+                <tr>
+                <td>2013-05-28
+                </td><td>华创证券
+                    </td><td><div style="overflow:hidden;height:18px;">廖万国,张伟光</div>
+                </td><td>0.52
+                </td><td>0.6943
+                </td><td>0.9026
+                </td><td>1.101
+                </td><td>--
+                </td><td>--
+                    </td><td>增持
+              </td></tr>
+                <tr>
+                <td>2013-05-28
+                </td><td>兴业证券
+                    </td><td><div style="overflow:hidden;height:18px;">徐佳熹,项军</div>
+                </td><td>0.52
+                </td><td>0.7538
+                </td><td>0.8729
+                </td><td>1.0216
+                </td><td>--
+                </td><td>--
+                    </td><td>增持
+              </td></tr>
+                <tr>
+                <td>2013-05-10
+                </td><td>中原证券
+                    </td><td><div style="overflow:hidden;height:18px;">罗敏</div>
+                </td><td>0.52
+                </td><td>0.739
+                </td><td>0.9998
+                </td><td>--
+                </td><td>--
+                </td><td>--
+                    </td><td>增持
+              </td></tr>
+                <tr>
+                <td>2013-05-02
+                </td><td>国金证券
+                    </td><td><div style="overflow:hidden;height:18px;">李敬雷,黄挺</div>
+                </td><td>0.52
+                </td><td>0.8114
+                </td><td>1.0693
+                </td><td>1.3926
+                </td><td>--
+                </td><td>--
+                    </td><td>买入
+              </td></tr>
+                <tr>
+                <td>2013-04-26
+                </td><td>东方证券
+                    </td><td><div style="overflow:hidden;height:18px;">李淑花</div>
+                </td><td>0.52
+                </td><td>0.7737
+                </td><td>0.982
+                </td><td>1.2002
+                </td><td>--
+                </td><td>--
+                    </td><td>增持
+              </td></tr>
+                <tr>
+                <td>2013-04-25
+                </td><td>招商证券
+                    </td><td><div style="overflow:hidden;height:18px;">李珊珊,徐列海,张同,杨烨辉</div>
+                </td><td>0.52
+                </td><td>0.734
+                </td><td>0.9225
+                </td><td>1.1109
+                </td><td>--
+                </td><td>--
+                    </td><td>增持
+              </td></tr>
+                <tr>
+                <td>2013-04-25
+                </td><td>中信建投
+                    </td><td><div style="overflow:hidden;height:18px;">吴斌,张明芳</div>
+                </td><td>0.52
+                </td><td>0.7142
+                </td><td>0.8927
+                </td><td>1.0712
+                </td><td>--
+                </td><td>--
+                    </td><td>增持
+              </td></tr>
+                <tr>
+                <td>2013-04-25
+                </td><td>长江证券
+                    </td><td><div style="overflow:hidden;height:18px;">刘舒畅,邹朋</div>
+                </td><td>0.52
+                </td><td>0.7935
+                </td><td>1.0415
+                </td><td>1.349
+                </td><td>--
+                </td><td>--
+                    </td><td>增持
+              </td></tr>
+                <tr>
+                <td>2013-04-24
+                </td><td>华创证券
+                    </td><td><div style="overflow:hidden;height:18px;">廖万国,张伟光</div>
+                </td><td>0.52
+                </td><td>0.6943
+                </td><td>0.9026
+                </td><td>1.101
+                </td><td>--
+                </td><td>--
+                    </td><td>增持
+              </td></tr>
+                <tr>
+                <td>2013-03-26
+                </td><td>招商证券
+                    </td><td><div style="overflow:hidden;height:18px;">徐列海,李珊珊,张同,杨烨辉</div>
+                </td><td>0.52
+                </td><td>0.734
+                </td><td>0.9225
+                </td><td>1.1109
+                </td><td>--
+                </td><td>--
+                    </td><td>增持
+              </td></tr>
+                <tr>
+                <td>2013-03-26
+                </td><td>长江证券
+                    </td><td><div style="overflow:hidden;height:18px;">刘舒畅,邹朋</div>
+                </td><td>0.52
+                </td><td>0.734
+                </td><td>0.9621
+                </td><td>1.2498
+                </td><td>--
+                </td><td>--
+                    </td><td>增持
+              </td></tr>
+                <tr>
+                <td>2013-03-26
+                </td><td>华创证券
+                    </td><td><div style="overflow:hidden;height:18px;">廖万国</div>
+                </td><td>0.52
+                </td><td>0.6943
+                </td><td>0.9026
+                </td><td>1.101
+                </td><td>--
+                </td><td>--
+                    </td><td>增持
+              </td></tr>
+                <tr>
+                <td>2013-03-26
+                </td><td>中信建投
+                    </td><td><div style="overflow:hidden;height:18px;">张明芳,崔文亮,林柏川</div>
+                </td><td>0.52
+                </td><td>0.7142
+                </td><td>0.8927
+                </td><td>1.0712
+                </td><td>--
+                </td><td>--
+                    </td><td>增持
+              </td></tr>
+            </tbody>
+            </table>
+
+
+            </div>
+</body>
+</html>
