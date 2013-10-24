@@ -72,7 +72,7 @@
       var elManagerFactory = new Backbone.CollectionBinder.ElManagerFactory(rowHtml, "data-name");
       collectionBinder = new Backbone.CollectionBinder(elManagerFactory, {date:'>:nth-child(1)', orgnization:'>:nth-child(2)', researcher:'>:nth-child(3)', lastYear:'>:nth-child(4)', thisYear: '>:nth-child(5)', nextYear:'>:nth-child(6)', next2Year:'>:nth-child(7)', next3Year:'>:nth-child(8)', next4Year:'>:nth-child(9)', evaluation:'>:nth-child(10)'});
       Backbone.ModelBinder.SetOptions({initialCopyDirection: Backbone.ModelBinder.Constants.ViewToModel});
-      collectionBinder.bind(window.collectionResult, jQuery('#report-ylyc-cont1 tbody'));
+      collectionBinder.bindNew(window.collectionResult, jQuery('#report-ylyc-cont1 tbody'));
       collectionBinder.copyViewValuesToModel();
     };
   }
