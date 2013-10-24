@@ -18,22 +18,6 @@
 
   <script type="text/javascript">
 
-  function start(){
-    Backbone.CollectionBinder.prototype.copyViewValuesToModel = function(){
-      var parentEl = $(this._elManagerFactory._getParentEl());
-      var children = parentEl.children();
-      var models = [];
-      for (var ii = 0; ii < children.length; ii++) {
-        var child = children[ii];
-        var model = new Backbone.Model();
-        var binder = new Backbone.ModelBinder();
-        binder.bind(model, child, this._options);
-        binder.copyViewValuesToModel();
-        models.push(model);
-        // this._collection.models.push(model);
-      };
-      this._collection.add(models, {silent:true})
-    };
 
     Backbone.ModelBinder.prototype._isElUserEditable = function (el) {
       return true;
@@ -54,6 +38,23 @@
             return el.val();
           }
       }
+    };
+
+  function start(){
+    Backbone.CollectionBinder.prototype.copyViewValuesToModel = function(){
+      var parentEl = $(this._elManagerFactory._getParentEl());
+      var children = parentEl.children();
+      var models = [];
+      for (var ii = 0; ii < children.length; ii++) {
+        var child = children[ii];
+        var model = new Backbone.Model();
+        var binder = new Backbone.ModelBinder();
+        binder.bind(model, child, this._options);
+        binder.copyViewValuesToModel();
+        models.push(model);
+        // this._collection.models.push(model);
+      };
+      this._collection.add(models, {silent:true})
     };
     window.ems = new Backbone.Collection([]);
     var rowHtml = '<tr><td data-name="firstName"></td><td data-name="lastName"></td><td data-name="phone"></td></tr>';
