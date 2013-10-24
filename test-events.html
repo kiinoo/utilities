@@ -1,0 +1,26 @@
+﻿<html>
+  <head>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>
+      jQuery().ready(function(){
+        jQuery('#testTD').on('change', function(e){
+          alert('td changed');
+        });
+        jQuery('#testTD').on('myCustomEvent',function(e){
+          alert('custom');
+        });
+      });
+      function changeIt() {
+        // jQuery('#testTD').append('something').change(); //why this did not raise the 'change' event for td?
+        jQuery('#testTD').append('somethingelse').trigger('myCustomEvent');
+      }
+
+    </script>
+
+  </head>
+  <body>
+    <table><tr><td id='testTD'>Test</td></tr></table>
+    <br/><br/>Josh age: <input type="text" class="age">
+    <a href="javascript:changeIt()">Change!</a>
+  </body>
+</html>

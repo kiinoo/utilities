@@ -1,53 +1,80 @@
 (function(window){
   window.withjQuery = function($){
-    Backbone.CollectionBinder.prototype.copyViewValuesToModel = function(){
-      var parentEl = $(this._elManagerFactory._getParentEl());
-      var children = parentEl.children();
-      for (var ii = 0; ii < children.length; ii++) {
-        var child = children[ii];
-        var model = new Backbone.Model();
-        var binder = new Backbone.ModelBinder();
-        binder.bind(model, child, this._options);
-        binder.copyViewValuesToModel();
-        this._collection.models.push(model);
-      };
-    };
+    if(!window.binderExtended){
+    (function extendBackboneBinder () {
+      Backbone.ModelBinder.prototype._isElUserEditable = function (el) {
+        return true;
+      }
 
-    Backbone.ModelBinder.prototype._isElUserEditable = function (el) {
-      return true;
+      Backbone.ModelBinder.prototype._getElValue = function(elementBinding, el){
+        var elType = el.attr('type');
+        if(elType == null)
+          return el.html();
+        switch (elType) {
+          case 'checkbox':
+            return el.prop('checked') ? true : false;
+          default:
+            if(el.attr('contenteditable') !== undefined){
+              return el.html();
+            }
+            else {
+              return el.val();
+            }
+        }
+      };
+
+      Backbone.CollectionBinder.prototype.copyViewValuesToCollection = function(){
+        var parentEl = $(this._elManagerFactory._getParentEl());
+        var models = [];
+        var children = parentEl.children();
+        for (var ii = 0; ii < children.length; ii++) {
+          var child = children[ii];
+          var model = new Backbone.Model();
+          var binder = new Backbone.ModelBinder();
+          binder.bind(model, child, this._options);
+          binder.copyViewValuesToModel();
+          models.push(model);
+        }
+        this._collection.add(models, {silent: true});
+      };
     }
-    window.ems = new Backbone.Collection([]);
+    window.binderExtended = true;
+    )();
+    }
+
+    window.collectionResult = new Backbone.Collection([]);
     var rowHtml = '<tr><td data-name="firstName"></td><td data-name="lastName"></td><td data-name="phone"></td></tr>';
     var elManagerFactory = new Backbone.CollectionBinder.ElManagerFactory(rowHtml, "data-name");
-    collectionBinder = new Backbone.CollectionBinder(elManagerFactory, {date:':nth-child(1)', orgnization:':nth-child(2)', researcher:':nth-child(2)', lastYear:':nth-child(3)', thisYear: ':nth-child(4)', nextYear:':nth-child(5)', next2Year:':nth-child(6)', next3Year:':nth-child(7)', next4Year:':nth-child(8)', evaluation:':nth-child(9)'});
-    collectionBinder.bind(window.ems, jQuery('#report-ylyc-cont1 tbody'));
+    collectionBinder = new Backbone.CollectionBinder(elManagerFactory, {date:'>:nth-child(1)', orgnization:'>:nth-child(2)', researcher:'>:nth-child(3)', lastYear:'>:nth-child(4)', thisYear: '>:nth-child(5)', nextYear:'>:nth-child(6)', next2Year:'>:nth-child(7)', next3Year:'>:nth-child(8)', next4Year:'>:nth-child(9)', evaluation:'>:nth-child(10)'});
+    Backbone.ModelBinder.SetOptions({initialCopyDirection: Backbone.ModelBinder.Constants.ViewToModel});
+    collectionBinder.bind(window.collectionResult, jQuery('#report-ylyc-cont1 tbody'));
     collectionBinder.copyViewValuesToModel();
   }
 })(window);
 
 
-$(jQuery('.titlebar')[3]).append('<a href="javascript:start()">开始！！！</a>');
-function start(){
-  Backbone.CollectionBinder.prototype.copyViewValuesToModel = function(){
-    var parentEl = $(this._elManagerFactory._getParentEl());
-    var children = parentEl.children();
-    for (var ii = 0; ii < children.length; ii++) {
-      var child = children[ii];
-      var model = new Backbone.Model();
-      var binder = new Backbone.ModelBinder();
-      binder.bind(model, child, this._options);
-      binder.copyViewValuesToModel();
-      this._collection.models.push(model);
-    };
-  };
+// $(jQuery('.titlebar')[3]).append('<a href="javascript:start()">开始！！！</a>');
+// function start(){
+//   Backbone.CollectionBinder.prototype.copyViewValuesToModel = function(){
+//     var parentEl = $(this._elManagerFactory._getParentEl());
+//     var children = parentEl.children();
+//     for (var ii = 0; ii < children.length; ii++) {
+//       var child = children[ii];
+//       var model = new Backbone.Model();
+//       var binder = new Backbone.ModelBinder();
+//       binder.bind(model, child, this._options);
+//       binder.copyViewValuesToModel();
+//       this._collection.models.push(model);
+//     };
+//   };
 
-  Backbone.ModelBinder.prototype._isElUserEditable = function (el) {
-    return true;
-  }
-  window.ems = new Backbone.Collection([]);
-  var rowHtml = '<tr><td data-name="firstName"></td><td data-name="lastName"></td><td data-name="phone"></td></tr>';
-  var elManagerFactory = new Backbone.CollectionBinder.ElManagerFactory(rowHtml, "data-name");
-  collectionBinder = new Backbone.CollectionBinder(elManagerFactory, {date:':nth-child(1)', orgnization:':nth-child(2)', researcher:':nth-child(2)', lastYear:':nth-child(3)', thisYear: ':nth-child(4)', nextYear:':nth-child(5)', next2Year:':nth-child(6)', next3Year:':nth-child(7)', next4Year:':nth-child(8)', evaluation:':nth-child(9)'});
-  collectionBinder.bind(window.ems, jQuery('#report-ylyc-cont1 tbody'));
-  collectionBinder.copyViewValuesToModel();
-}
+//   Backbone.ModelBinder.prototype._isElUserEditable = function (el) {
+//     return true;
+//   }
+//   window.ems = new Backbone.Collection([]);
+//   var rowHtml = '<tr><td data-name="firstName"></td><td data-name="lastName"></td><td data-name="phone"></td></tr>';
+//   var elManagerFactory = new Backbone.CollectionBinder.ElManagerFactory(rowHtml, "data-name");
+//   collectionBinder = new Backbone.CollectionBinder(elManagerFactory, {date:':nth-child(1)', orgnization:':nth-child(2)', researcher:':nth-child(2)', lastYear:':nth-child(3)', thisYear: ':nth-child(4)', nextYear:':nth-child(5)', next2Year:':nth-child(6)', next3Year:':nth-child(7)', next4Year:':nth-child(8)', evaluation:':nth-child(9)'});
+//   collectionBinder.bind(window.ems, jQuery('#report-ylyc-cont1 tbody'));
+//   collectionBinder.copyViewValuesToModel();
+// }
