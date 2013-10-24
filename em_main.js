@@ -9,7 +9,7 @@ javascript:(function(){
     var timeout = navigator && navigator.appName && navigator.appName.indexOf('icrosoft') != -1 ? 2000 : 100;
     setTimeout(function(){
       loadRS([
-        ['https://rawgithub.com/kiinoo/utilities/master/em_utils.js', function(){return typeof withjQuery !== 'function';}]
+        ['https://rawgithub.com/kiinoo/utilities/master/em_utils.js', function(){return typeof window.withjQuery !== 'function';}]
       ],function(){
         withjQuery(jQuery);
       });
