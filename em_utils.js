@@ -23,6 +23,11 @@
         }
       };
 
+      Backbone.CollectionBinder.prototype.bindOld = Backbone.CollectionBinder.prototype.bind;
+      Backbone.CollectionBinder.prototype.bind = function(collection, parentEl){
+        this.bindOld(collection, parentEl);
+      };
+
       Backbone.CollectionBinder.prototype.copyViewValuesToCollection = function(){
         var parentEl = $(this._elManagerFactory._getParentEl());
         var models = [];
