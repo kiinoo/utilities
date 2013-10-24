@@ -2,6 +2,10 @@
   window.withjQuery = function($){
     if(!window.binderExtended){
     (function extendBackboneBinder () {
+      Backbone.ModelBinder.prototype.AaronTest = function (el) {
+        return true;
+      }
+
       Backbone.ModelBinder.prototype._isElUserEditable = function (el) {
         return true;
       }
