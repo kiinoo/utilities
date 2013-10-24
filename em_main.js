@@ -3,13 +3,13 @@ javascript:(function(){
     ['http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js',             function(){return typeof jQuery === 'undefined';    }],
     ['http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js', function(){return typeof _ === 'undefined';         }],
     ['http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.0.0/backbone-min.js',     function(){return typeof Backbone === 'undefined';  }],
-    ['https://rawgithub.com/theironcook/Backbone.ModelBinder/master/Backbone.ModelBinder.min.js',           function(){return typeof Backbone.ModelBinder === 'undefined';  }],
-    ['https://rawgithub.com/theironcook/Backbone.ModelBinder/master/Backbone.CollectionBinder.min.js',      function(){return typeof Backbone.CollectionBinder === 'undefined';  }],
+    ['https://rawgithub.com/theironcook/Backbone.ModelBinder/master/Backbone.ModelBinder.js',           function(){return typeof Backbone.ModelBinder === 'undefined';  }],
+    ['https://rawgithub.com/theironcook/Backbone.ModelBinder/master/Backbone.CollectionBinder.js',      function(){return typeof Backbone.CollectionBinder === 'undefined';  }],
   ],function(){
     var timeout = navigator && navigator.appName && navigator.appName.indexOf('icrosoft') != -1 ? 2000 : 100;
     setTimeout(function(){
       loadRS([
-        ['https://rawgithub.com/kiinoo/utilities/master/jira_cards_printing_utils.js', function(){return typeof withjQuery !== 'function';}]
+        ['https://rawgithub.com/kiinoo/utilities/master/em_utils.js', function(){return typeof withjQuery !== 'function';}]
       ],function(){
         withjQuery(jQuery);
       });
