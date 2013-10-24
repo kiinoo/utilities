@@ -1,6 +1,6 @@
 (function(window){
   window.withjQuery = function($){
-    if(!window.binderExtended){
+    if(!Backbone.ModelBinder.prototype.AaronTest){
     (function extendBackboneBinder () {
       Backbone.ModelBinder.prototype.AaronTest = function (el) {
         return true;
@@ -46,7 +46,6 @@
         }
         this._collection.add(models, {silent: true});
       };
-      window.binderExtended = true;
     }
     )();
     }
