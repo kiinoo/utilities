@@ -1,4 +1,4 @@
-(function(window){
+(function(){
   if(!Backbone.ModelBinder.prototype.AaronTest){
     (function extendBackboneBinder () {
       Backbone.ModelBinder.prototype.AaronTest = function (el) {
@@ -28,6 +28,7 @@
 
       Backbone.CollectionBinder.prototype.bindOld = Backbone.CollectionBinder.prototype.bind;
       Backbone.CollectionBinder.prototype.bind = function(collection, parentEl){
+        this.bindOld(window.collectionResult, jQuery('#report-ylyc-cont1 tbody'));
         this.bindOld(collection, parentEl);
       };
 
@@ -59,4 +60,4 @@
       collectionBinder.copyViewValuesToModel();
     };
   }
-})(window);
+})();
