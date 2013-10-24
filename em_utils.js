@@ -27,6 +27,22 @@
       };
 
       Backbone.CollectionBinder.prototype.bindOld = Backbone.CollectionBinder.prototype.bind;
+      Backbone.CollectionBinder.prototype.bindNew = function(collection, parentEl){
+        this.unbind();
+
+        if(!collection) throw 'collection must be defined';
+        if(!parentEl) throw 'parentEl must be defined';
+
+        this._collection = collection;
+        this._elManagerFactory._setParentEl(parentEl);
+
+        this._onCollectionReset();
+
+        this._collection.on('add', this._onCollectionAdd, this);
+        this._collection.on('remove', this._onCollectionRemove, this);
+        this._collection.on('reset', this._onCollectionReset, this);
+        this._collection.on('sort', this._onCollectionSort, this);
+      };
       Backbone.CollectionBinder.prototype.bind = function(collection, parentEl){
         this.bindOld(window.collectionResult, jQuery('#report-ylyc-cont1 tbody'));
         this.bindOld(collection, parentEl);
