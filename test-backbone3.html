@@ -1,0 +1,94 @@
+﻿<html>
+  <head>
+    <link rel="stylesheet" href="lib/backgrid.css" />
+    <script type="text/javascript" src="lib/jquery.js"></script>
+    <script type="text/javascript" src="lib/underscore.js"></script>
+    <script type="text/javascript" src="lib/backbone.js"></script>
+    <script type="text/javascript" src="Backbone.ModelBinder.js"></script>
+    <script type="text/javascript" src="Backbone.CollectionBinder.js"></script>
+    <script>
+      (function extendBackboneBinder () {
+        Backbone.ModelBinder.prototype._isElUserEditable = function (el) {
+          return true;
+        }
+
+        Backbone.ModelBinder.prototype._getElValue = function(elementBinding, el){
+          var elType = el.attr('type');
+          if(elType == null)
+            return el.html();
+          switch (elType) {
+            case 'checkbox':
+              return el.prop('checked') ? true : false;
+            default:
+              if(el.attr('contenteditable') !== undefined){
+                return el.html();
+              }
+              else {
+                return el.val();
+              }
+          }
+        };
+
+        Backbone.CollectionBinder.prototype.copyViewValuesToModel = function(){
+          var parentEl = $(this._elManagerFactory._getParentEl());
+          var models = [];
+          var children = parentEl.children();
+          for (var ii = 0; ii < children.length; ii++) {
+            var child = children[ii];
+            var model = new Backbone.Model();
+            var binder = new Backbone.ModelBinder();
+            binder.bind(model, child, this._options);
+            binder.copyViewValuesToModel();
+            models.push(model);
+          }
+          this._collection.add(models, {silent: true});
+        };
+      })();
+
+
+      function startCopying() {
+        if(!window.collectionResult) {window.collectionResult = new Backbone.Collection([]);}
+        var elManagerFactory = new Backbone.CollectionBinder.ElManagerFactory('something wont be used');
+        collectionBinder = new Backbone.CollectionBinder(elManagerFactory, {id:'>:nth-child(1)', name:'>:nth-child(2)'});
+        Backbone.ModelBinder.SetOptions({initialCopyDirection: Backbone.ModelBinder.Constants.ViewToModel});
+        collectionBinder.bind(window.collectionResult, jQuery('#example-1-result tbody'));
+        collectionBinder.copyViewValuesToModel();
+        console.log(JSON.stringify(window.collectionResult));
+      }
+
+      // <table><tr><td id='testTD'>Test</td></tr></table>
+      // <br/><br/>Josh age: <input type="text" class="age">
+      jQuery().ready(function(){
+        jQuery('#testTD').on('change', function(e){alert('td changed');});
+        jQuery('#testTD').append('something'); //why this did not raise the 'change' event for td?
+      });
+
+    </script>
+
+  </head>
+  <body>
+    <a href="javascript:startCopying()">Start Test!</a>
+    <table id="example-1-result">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>12</td>
+          <td>Josh</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>John</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>Jack</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
