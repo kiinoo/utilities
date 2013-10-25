@@ -1,0 +1,1535 @@
+﻿
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--[134] staticed at 2013-09-23 17:23:21-->
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<title>华兰生物(002007) </title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="keywords" content="华兰生物,002007,机构研究报告,研报中心,研报,个股评级,买入评级,个股研报,盈利预测,行业研究,行业研报,策略研究" />
+<meta name="description" content="东方财富网研报中心:第一时间提供关于华兰生物(002007)的各大券商研究所报告，最大程度减少个人投资者与机构之间信息上的差异，使个人投资者更早的了解到上市公司基本面变化。" />
+<meta name="robots" content="index, follow" />
+<meta name="googlebot" content="index, follow" />
+<link rel="stylesheet" type="text/css" href="../css/page.css"/>
+<link rel="stylesheet" type="text/css" href="../css/hyyb.css"/>
+<meta http-equiv="refresh" content="1200" />
+<base target="_blank" />
+</head>
+<body>
+
+<link rel="stylesheet" type="text/css" media="all" href="/css/default.css?rt=20120711"/>
+<link rel="stylesheet" type="text/css" media="all" href="/css/layer2012.css?rt=20120717"/>
+<script type="text/javascript" src="http://data.eastmoney.com/js/base.js?rt=20120711"></script>
+<!-- <script type="text/javascript" src="http://data.eastmoney.com/js/plugin.js?rt=20120711"></script> -->
+<script type="text/javascript" src="plugin.js"></script>
+<script type="text/javascript" src="http://data.eastmoney.com/js/layer2012.js?rt=20120711"></script>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.0.0/backbone-min.js"></script>
+<script type="text/javascript" src="https://rawgithub.com/theironcook/Backbone.ModelBinder/master/Backbone.ModelBinder.js"></script>
+<script type="text/javascript" src="https://rawgithub.com/theironcook/Backbone.ModelBinder/master/Backbone.CollectionBinder.js"></script>
+
+    <script>
+      (function extendBackboneBinder () {
+        Backbone.ModelBinder.prototype._isElUserEditable = function (el) {
+          return true;
+        }
+
+        Backbone.ModelBinder.prototype._getElValue = function(elementBinding, el){
+          var elType = el.attr('type');
+          if(elType == null)
+            return el.html();
+          switch (elType) {
+            case 'checkbox':
+              return el.prop('checked') ? true : false;
+            default:
+              if(el.attr('contenteditable') !== undefined){
+                return el.html();
+              }
+              else {
+                return el.val();
+              }
+          }
+        };
+
+        Backbone.CollectionBinder.prototype.copyViewValuesToCollection = function(){
+          var parentEl = $(this._elManagerFactory._getParentEl());
+          var models = [];
+          var children = parentEl.children();
+          for (var ii = 0; ii < children.length; ii++) {
+            var child = children[ii];
+            var model = new Backbone.Model();
+            var binder = new Backbone.ModelBinder();
+            binder.bind(model, child, this._options);
+            binder.copyViewValuesToModel();
+            models.push(model);
+          }
+          this._collection.add(models, {silent: true});
+        };
+      })();
+
+      function startCopying() {
+      	window.collectionResult = new Backbone.Collection([]);
+      	var rowHtml = '<tr><td data-name="firstName"></td><td data-name="lastName"></td><td data-name="phone"></td></tr>';
+      	var elManagerFactory = new Backbone.CollectionBinder.ElManagerFactory(rowHtml, "data-name");
+      	collectionBinder = new Backbone.CollectionBinder(elManagerFactory, {date:'>:nth-child(1)', orgnization:'>:nth-child(2)', researcher:'>:nth-child(3)>div', lastYear:'>:nth-child(4)', thisYear: '>:nth-child(5)', nextYear:'>:nth-child(6)', next2Year:'>:nth-child(7)', next3Year:'>:nth-child(8)', next4Year:'>:nth-child(9)', evaluation:'>:nth-child(10)'});
+      	Backbone.ModelBinder.SetOptions({initialCopyDirection: Backbone.ModelBinder.Constants.ViewToModel});
+      	collectionBinder.bind(window.collectionResult, '#report-ylyc-cont1 tbody');
+      	collectionBinder.copyViewValuesToCollection();
+      }
+    </script>
+
+			<b class="lbcorner"></b>
+			<b class="rbcorner"></b>
+		</div>
+	</div>
+	<div class="centerMoreCont hidden" id="getMoreListCont">
+		<ul>
+			<li>-</li>
+		</ul>
+	</div>
+	<script>
+	    initMenu();
+	</script>
+</div>
+<div class="s6"></div>
+<div class="mainFrame">
+	<div class="maincont">
+		<div class="cnBox">
+			<div class="titlebar">
+				<b class="el"></b>
+				<div class="tit">
+					<a href="http://quote.eastmoney.com/sz002007.html">华兰生物(002007)</a> 研报一览
+				</div>
+				<div class="favor">
+					<img src="http://data.eastmoney.com/images/update.png" title="查看最新" alt="查看最新" onclick="location.reload()" />
+                            <img src="/images/favor.png" title="收藏本页" alt="收藏本页" onclick="AddFavor();" />
+				</div>
+				<div class="search" style="float:right;padding-left:5px;padding-right:5px;">
+					<span class="txt">个股研报：</span>
+					<form target="_self" method="get"><input value="输代码、名称或拼音" autocomplete="off" class="sinput" name="report_bar" id="report_bar" type="text"></form>
+					<div class="btnSearch" style="float: left; cursor: pointer;" onclick="javascript:ggyb_search('report_bar')">
+                        <img src="/images/btn_search_red.gif" alt="查找" title="查询" />
+                   </div>
+				</div>
+				<div class="tips" style="float:right;">
+					<b class="arr_01"></b>
+					<a href="/report/" class="link1" title="点击进入研报中心">点击进入研报中心</a>
+				</div>
+				<script type="text/javascript">
+				    var zz = new StockSuggest("report_bar", {
+				        text: "输代码、名称或拼音",
+				        type: "ABSTOCK",
+				        autoSubmit: false,
+				        width: 200,
+				        header: ["选项", "代码", "名称", "类型"],
+				        body: [-1, 1, 4, -2],
+				        callback: function (ag) {window.open('/report/' + ag["code"] + '.html');}
+				    });
+
+				    function ggyb_search(bb) {
+				        var s1 = document.getElementById(bb).value;
+				        var s = escape(s1);
+				        if (s1 == "输代码、名称或拼音" || s1 == "" || isNaN(parseInt(s1)) || s1.length != 6) {
+				            alert("请输入所要查询股票的代码！");
+				            return false;
+				        } else {
+				            var url = '/report/' + s1 + '.html';
+				            window.open(url);
+				        }
+				    }
+				</script>
+			</div>
+		</div>
+        <div class="cnBox" style="border-top:0;">
+			<div class="content" id="zjlx_hqcont">
+			</div>
+		</div>
+		<div class="s6"></div>
+		
+<div class="c1">
+			<div class="cnBox">
+				<div class="titlebar">
+					<b class="el0"></b>
+					<div class="tit">
+						投资评级 
+					</div>
+				</div>
+				<div class="content">
+					<div class="report-img-cont img-chart1">
+                         <div style="height:155px;width:415px;margin:0 auto;background:url(http://hqchart.eastmoney.com/f9v2/002007/sz002007_F9_TZPJ.png) 80px center no-repeat;">
+                         </div>
+					</div>
+					<table width="100%" cellspacing="0" cellpadding="0" border="0"  class="report_t">
+                        <tbody>
+					        <tr class="hd">
+						        <th>统计时段</th>
+						        <th>买入</th>
+						        <th>增持</th>
+						        <th>中性</th>
+						        <th>减持</th>
+						        <th>卖出</th>
+						        <th>合计</th>
+					        </tr>
+					        
+						<tr>
+						    <td>一个月内</td>
+						    <td>1</td>
+						    <td>0</td>
+						    <td>0</td>
+						    <td>0</td>
+						    <td>0</td>
+						    <td>1</td>
+						</tr>
+						<tr>
+						    <td>三个月内</td>
+						    <td>7</td>
+						    <td>13</td>
+						    <td>0</td>
+						    <td>0</td>
+						    <td>0</td>
+						    <td>20</td>
+						</tr>
+						<tr>
+						    <td>半年内</td>
+						    <td>9</td>
+						    <td>31</td>
+						    <td>0</td>
+						    <td>0</td>
+						    <td>0</td>
+						    <td>40</td>
+						</tr>
+						<tr>
+						    <td>一年内</td>
+						    <td>17</td>
+						    <td>47</td>
+						    <td>1</td>
+						    <td>0</td>
+						    <td>0</td>
+						    <td>65</td>
+						</tr>
+
+                        </tbody>
+                    </table>
+				</div>
+			</div>
+			<div class="s6"></div>
+		</div>
+<div class="c2">
+			<div class="cnBox">
+				<div class="titlebar">
+					<b class="el0"></b>
+					<div class="tit">
+						盈利预测 
+					</div>
+				</div>
+				<div class="content">
+					<div class="report-img-cont img-chart2">
+                        <div style="height:202px;width:408px;background:url(http://f9.eastmoney.com/ct/002007/sz002007_F9_YLYC.png) center center no-repeat;margin:0 auto;">
+                         </div>
+					</div>
+					<table width="477" cellspacing="0" cellpadding="0" border="0" class="report_t">
+						
+						<tbody>
+						    <tr>
+						        <th width="80"><img src="../images/datezb.gif"/></th>
+						        <th>2010年</th>
+						        <th>2011年</th>
+						        <th>2012年</th>
+						        <th>2013年预测</th>
+						        <th>2014年预测</th>
+						    </tr>
+						</tbody>
+						<tr>
+						    <td>每股收益(元)</td>
+						        <td>1.0541</td>
+						        <td>0.6382</td>
+						        <td>0.5161</td>
+						        <td>0.7674</td>
+						        <td>0.973</td>
+						</tr>
+						<tr>
+						    <td>净利润(亿元)</td>
+						        <td>6.1236</td>
+						        <td>3.7072</td>
+						        <td>2.9979</td>
+						        <td>4.442</td>
+						        <td>5.6467</td>
+						</tr>
+						</tbody>
+
+					</table>
+				</div>
+			</div>
+			<div class="s6"></div>
+			
+		</div>
+<div>
+    <div class="cnBox">
+				<div class="titlebar">
+					<b class="el0"></b>
+					<div class="tit">
+						盈利预测明细
+					</div>
+					<div class="report-slider">
+						<ul id="rep-tab">
+							<li class="at">每股收益(元)</li>
+							<li>净利润(亿元)</li>
+						</ul>
+					</div>
+				</div>
+				<div class="content">
+					<div class="report-data-chart" style="width:948px;">
+					    <div id="report-ylyc-cont1">
+						   
+						        
+						<table cellspacing="0" cellpadding="0" border="0" class="t1 w933" style="width:100%;">
+						<thead class="h24">
+						    <tr>
+								<th width="100px">日期</th>
+								<th width="100px">机构</th>
+						        <th >研究员</th>
+								<th width="80px">2012<i title="预测数据根据各机构发布的研报报告摘录所得，与本网站立场无关；&#10;2011每股收益为经最新总股本计算所得" style="background:url(http://hqres.eastmoney.com/EMQuote_A_Center/images/faq.png) no-repeat 0 0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i></th>
+								<th width="80px">2013预测</th>
+								<th width="80px">2014预测</th>
+								<th width="80px">2015预测</th>
+								<th width="80px">2016预测</th>
+								<th width="80px">2017预测</th>
+						       <th width="80px">评级</th>
+							</tr>
+						</thead>
+						<tbody>
+						    <tr>
+								<td>2013-09-23</th>
+								<td>德邦证券</th>
+						        <td><div style="overflow:hidden;height:18px;">郑一宁</div></th>
+								<td>0.52</th>
+								<td>0.82</th>
+								<td>1.04</th>
+								<td>1.31</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>买入</th>
+							</tr>
+						    <tr>
+								<td>2013-09-05</th>
+								<td>国泰君安</th>
+						        <td><div style="overflow:hidden;height:18px;">李秋实,张一甫,李少思</div></th>
+								<td>0.52</th>
+								<td>0.7737</th>
+								<td>0.9423</th>
+								<td>1.101</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>买入</th>
+							</tr>
+						    <tr>
+								<td>2013-08-16</th>
+								<td>长城证券</th>
+						        <td><div style="overflow:hidden;height:18px;">姚雯琦</div></th>
+								<td>0.52</th>
+								<td>0.7935</th>
+								<td>0.9721</th>
+								<td>1.1308</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>增持</th>
+							</tr>
+						    <tr>
+								<td>2013-08-15</th>
+								<td>长江证券</th>
+						        <td><div style="overflow:hidden;height:18px;">刘舒畅</div></th>
+								<td>0.52</th>
+								<td>0.7935</th>
+								<td>1.0415</th>
+								<td>1.349</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>增持</th>
+							</tr>
+						    <tr>
+								<td>2013-08-15</th>
+								<td>东方证券</th>
+						        <td><div style="overflow:hidden;height:18px;">李淑花</div></th>
+								<td>0.52</th>
+								<td>0.7737</th>
+								<td>0.982</th>
+								<td>1.2002</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>增持</th>
+							</tr>
+						    <tr>
+								<td>2013-08-15</th>
+								<td>兴业证券</th>
+						        <td><div style="overflow:hidden;height:18px;">徐佳熹,项军</div></th>
+								<td>0.52</th>
+								<td>0.7538</th>
+								<td>0.8729</th>
+								<td>1.0216</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>增持</th>
+							</tr>
+						    <tr>
+								<td>2013-08-15</th>
+								<td>联讯证券</th>
+						        <td><div style="overflow:hidden;height:18px;">罗柏言</div></th>
+								<td>0.52</th>
+								<td>0.7638</th>
+								<td>1.0514</th>
+								<td>1.2696</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>增持</th>
+							</tr>
+						    <tr>
+								<td>2013-08-15</th>
+								<td>中信建投</th>
+						        <td><div style="overflow:hidden;height:18px;">吴斌</div></th>
+								<td>0.52</th>
+								<td>0.7737</th>
+								<td>0.9225</th>
+								<td>1.0911</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>增持</th>
+							</tr>
+						    <tr>
+								<td>2013-08-15</th>
+								<td>中山证券</th>
+						        <td><div style="overflow:hidden;height:18px;">林兴秋</div></th>
+								<td>0.52</th>
+								<td>0.734</th>
+								<td>0.9324</th>
+								<td>1.22</th>
+								<td>--</th>
+								<td>--</th>
+						        <td></th>
+							</tr>
+						    <tr>
+								<td>2013-08-14</th>
+								<td>招商证券</th>
+						        <td><div style="overflow:hidden;height:18px;">李珊珊,徐列海,张同,杨烨辉</div></th>
+								<td>0.52</th>
+								<td>0.7638</th>
+								<td>0.9621</th>
+								<td>1.1804</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>增持</th>
+							</tr>
+						    <tr>
+								<td>2013-08-14</th>
+								<td>华创证券</th>
+						        <td><div style="overflow:hidden;height:18px;">廖万国,张伟光</div></th>
+								<td>0.52</th>
+								<td>0.7538</th>
+								<td>0.9225</th>
+								<td>1.0812</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>增持</th>
+							</tr>
+						    <tr>
+								<td>2013-07-31</th>
+								<td>长江证券</th>
+						        <td><div style="overflow:hidden;height:18px;">刘舒畅,邹朋</div></th>
+								<td>0.52</th>
+								<td>0.7935</th>
+								<td>1.0415</th>
+								<td>1.349</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>增持</th>
+							</tr>
+						    <tr>
+								<td>2013-07-31</th>
+								<td>东方证券</th>
+						        <td><div style="overflow:hidden;height:18px;">李淑花</div></th>
+								<td>0.52</th>
+								<td>0.7737</th>
+								<td>0.982</th>
+								<td>1.2002</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>增持</th>
+							</tr>
+						    <tr>
+								<td>2013-07-25</th>
+								<td>光大证券</th>
+						        <td><div style="overflow:hidden;height:18px;">姚杰,江维娜</div></th>
+								<td>0.52</th>
+								<td>0.8034</th>
+								<td>1.0117</th>
+								<td>1.3291</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>买入</th>
+							</tr>
+						    <tr>
+								<td>2013-07-21</th>
+								<td>华创证券</th>
+						        <td><div style="overflow:hidden;height:18px;">廖万国,张伟光</div></th>
+								<td>0.52</th>
+								<td>0.7538</th>
+								<td>0.9225</th>
+								<td>1.0812</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>增持</th>
+							</tr>
+						    <tr>
+								<td>2013-07-19</th>
+								<td>国金证券</th>
+						        <td><div style="overflow:hidden;height:18px;">李敬雷,黄挺,叶苏</div></th>
+								<td>0.52</th>
+								<td>0.8114</th>
+								<td>1.0693</th>
+								<td>1.3926</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>买入</th>
+							</tr>
+						    <tr>
+								<td>2013-07-18</th>
+								<td>国都证券</th>
+						        <td><div style="overflow:hidden;height:18px;">刘苗</div></th>
+								<td>0.52</th>
+								<td>0.734</th>
+								<td>1.0216</th>
+								<td>1.3291</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>买入</th>
+							</tr>
+						    <tr>
+								<td>2013-07-15</th>
+								<td>国金证券</th>
+						        <td><div style="overflow:hidden;height:18px;">李敬雷,黄挺</div></th>
+								<td>0.52</th>
+								<td>0.8114</th>
+								<td>1.0693</th>
+								<td>1.3926</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>买入</th>
+							</tr>
+						    <tr>
+								<td>2013-07-10</th>
+								<td>东方证券</th>
+						        <td><div style="overflow:hidden;height:18px;">李淑花</div></th>
+								<td>0.52</th>
+								<td>0.7737</th>
+								<td>0.982</th>
+								<td>1.2002</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>增持</th>
+							</tr>
+						    <tr>
+								<td>2013-06-21</th>
+								<td>国金证券</th>
+						        <td><div style="overflow:hidden;height:18px;">李敬雷,黄挺</div></th>
+								<td>0.52</th>
+								<td>0.8114</th>
+								<td>1.0693</th>
+								<td>1.3926</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>买入</th>
+							</tr>
+						    <tr>
+								<td>2013-06-20</th>
+								<td>华创证券</th>
+						        <td><div style="overflow:hidden;height:18px;">廖万国,张伟光</div></th>
+								<td>0.52</th>
+								<td>0.7538</th>
+								<td>0.9225</th>
+								<td>1.0812</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>增持</th>
+							</tr>
+						    <tr>
+								<td>2013-05-30</th>
+								<td>东方证券</th>
+						        <td><div style="overflow:hidden;height:18px;">李淑花</div></th>
+								<td>0.52</th>
+								<td>0.7737</th>
+								<td>0.982</th>
+								<td>1.2002</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>增持</th>
+							</tr>
+						    <tr>
+								<td>2013-05-29</th>
+								<td>国金证券</th>
+						        <td><div style="overflow:hidden;height:18px;">李敬雷,黄挺</div></th>
+								<td>0.52</th>
+								<td>0.8114</th>
+								<td>1.0693</th>
+								<td>1.3926</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>买入</th>
+							</tr>
+						    <tr>
+								<td>2013-05-29</th>
+								<td>中信建投</th>
+						        <td><div style="overflow:hidden;height:18px;">吴斌,张明芳</div></th>
+								<td>0.52</th>
+								<td>0.7737</th>
+								<td>0.9225</th>
+								<td>1.0911</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>增持</th>
+							</tr>
+						    <tr>
+								<td>2013-05-28</th>
+								<td>国泰君安</th>
+						        <td><div style="overflow:hidden;height:18px;">沈莉,王稹</div></th>
+								<td>0.52</th>
+								<td>0.7439</th>
+								<td>0.8927</th>
+								<td>1.0712</th>
+								<td>--</th>
+								<td>--</th>
+						        <td></th>
+							</tr>
+						    <tr>
+								<td>2013-05-28</th>
+								<td>华创证券</th>
+						        <td><div style="overflow:hidden;height:18px;">廖万国,张伟光</div></th>
+								<td>0.52</th>
+								<td>0.6943</th>
+								<td>0.9026</th>
+								<td>1.101</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>增持</th>
+							</tr>
+						    <tr>
+								<td>2013-05-28</th>
+								<td>兴业证券</th>
+						        <td><div style="overflow:hidden;height:18px;">徐佳熹,项军</div></th>
+								<td>0.52</th>
+								<td>0.7538</th>
+								<td>0.8729</th>
+								<td>1.0216</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>增持</th>
+							</tr>
+						    <tr>
+								<td>2013-05-10</th>
+								<td>中原证券</th>
+						        <td><div style="overflow:hidden;height:18px;">罗敏</div></th>
+								<td>0.52</th>
+								<td>0.739</th>
+								<td>0.9998</th>
+								<td>--</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>增持</th>
+							</tr>
+						    <tr>
+								<td>2013-05-02</th>
+								<td>国金证券</th>
+						        <td><div style="overflow:hidden;height:18px;">李敬雷,黄挺</div></th>
+								<td>0.52</th>
+								<td>0.8114</th>
+								<td>1.0693</th>
+								<td>1.3926</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>买入</th>
+							</tr>
+						    <tr>
+								<td>2013-04-26</th>
+								<td>东方证券</th>
+						        <td><div style="overflow:hidden;height:18px;">李淑花</div></th>
+								<td>0.52</th>
+								<td>0.7737</th>
+								<td>0.982</th>
+								<td>1.2002</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>增持</th>
+							</tr>
+						    <tr>
+								<td>2013-04-25</th>
+								<td>招商证券</th>
+						        <td><div style="overflow:hidden;height:18px;">李珊珊,徐列海,张同,杨烨辉</div></th>
+								<td>0.52</th>
+								<td>0.734</th>
+								<td>0.9225</th>
+								<td>1.1109</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>增持</th>
+							</tr>
+						    <tr>
+								<td>2013-04-25</th>
+								<td>中信建投</th>
+						        <td><div style="overflow:hidden;height:18px;">吴斌,张明芳</div></th>
+								<td>0.52</th>
+								<td>0.7142</th>
+								<td>0.8927</th>
+								<td>1.0712</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>增持</th>
+							</tr>
+						    <tr>
+								<td>2013-04-25</th>
+								<td>长江证券</th>
+						        <td><div style="overflow:hidden;height:18px;">刘舒畅,邹朋</div></th>
+								<td>0.52</th>
+								<td>0.7935</th>
+								<td>1.0415</th>
+								<td>1.349</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>增持</th>
+							</tr>
+						    <tr>
+								<td>2013-04-24</th>
+								<td>华创证券</th>
+						        <td><div style="overflow:hidden;height:18px;">廖万国,张伟光</div></th>
+								<td>0.52</th>
+								<td>0.6943</th>
+								<td>0.9026</th>
+								<td>1.101</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>增持</th>
+							</tr>
+						    <tr>
+								<td>2013-03-26</th>
+								<td>招商证券</th>
+						        <td><div style="overflow:hidden;height:18px;">徐列海,李珊珊,张同,杨烨辉</div></th>
+								<td>0.52</th>
+								<td>0.734</th>
+								<td>0.9225</th>
+								<td>1.1109</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>增持</th>
+							</tr>
+						    <tr>
+								<td>2013-03-26</th>
+								<td>长江证券</th>
+						        <td><div style="overflow:hidden;height:18px;">刘舒畅,邹朋</div></th>
+								<td>0.52</th>
+								<td>0.734</th>
+								<td>0.9621</th>
+								<td>1.2498</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>增持</th>
+							</tr>
+						    <tr>
+								<td>2013-03-26</th>
+								<td>华创证券</th>
+						        <td><div style="overflow:hidden;height:18px;">廖万国</div></th>
+								<td>0.52</th>
+								<td>0.6943</th>
+								<td>0.9026</th>
+								<td>1.101</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>增持</th>
+							</tr>
+						    <tr>
+								<td>2013-03-26</th>
+								<td>中信建投</th>
+						        <td><div style="overflow:hidden;height:18px;">张明芳,崔文亮,林柏川</div></th>
+								<td>0.52</th>
+								<td>0.7142</th>
+								<td>0.8927</th>
+								<td>1.0712</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>增持</th>
+							</tr>
+						</tbody>
+						</table>
+
+						    </table>
+						</div>
+						<div id="report-ylyc-cont2" style="display:none;">
+						    <table cellspacing="0" cellpadding="0" border="0" class="t1 w933"> 
+						        
+						<table cellspacing="0" cellpadding="0" border="0" class="t1 w933" style="width:100%;">
+						<thead class="h24">
+						    <tr>
+								<th width="100px">日期</th>
+								<th width="100px">机构</th>
+						        <th >研究员</th>
+								<th width="80px">2012<i title="预测数据根据各机构发布的研报报告摘录所得，与本网站立场无关；&#10;2011每股收益为经最新总股本计算所得" style="background:url(http://hqres.eastmoney.com/EMQuote_A_Center/images/faq.png) no-repeat 0 0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i></th>
+								<th width="80px">2013预测</th>
+								<th width="80px">2014预测</th>
+								<th width="80px">2015预测</th>
+								<th width="80px">2016预测</th>
+								<th width="80px">2017预测</th>
+						       <th width="80px">评级</th>
+							</tr>
+						</thead>
+						<tbody>
+						    <tr>
+								<td>2013-09-23</th>
+								<td>德邦证券</th>
+						        <td><div style="overflow:hidden;height:20px;">郑一宁</div></th>
+								<td>3.00</th>
+								<td>4.77</th>
+								<td>6.02</th>
+								<td>7.58</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>--</th>
+							</tr>
+						    <tr>
+								<td>2013-08-16</th>
+								<td>长城证券</th>
+						        <td><div style="overflow:hidden;height:20px;">姚雯琦</div></th>
+								<td>3.00</th>
+								<td>4.55</th>
+								<td>5.69</th>
+								<td>6.63</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>--</th>
+							</tr>
+						    <tr>
+								<td>2013-08-15</th>
+								<td>中信建投</th>
+						        <td><div style="overflow:hidden;height:20px;">吴斌</div></th>
+								<td>3.00</th>
+								<td>4.50</th>
+								<td>5.35</th>
+								<td>6.33</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>--</th>
+							</tr>
+						    <tr>
+								<td>2013-08-15</th>
+								<td>长江证券</th>
+						        <td><div style="overflow:hidden;height:20px;">刘舒畅</div></th>
+								<td>3.00</th>
+								<td>4.61</th>
+								<td>6.05</th>
+								<td>7.85</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>--</th>
+							</tr>
+						    <tr>
+								<td>2013-08-15</th>
+								<td>东方证券</th>
+						        <td><div style="overflow:hidden;height:20px;">李淑花</div></th>
+								<td>3.00</th>
+								<td>4.48</th>
+								<td>5.71</th>
+								<td>6.95</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>--</th>
+							</tr>
+						    <tr>
+								<td>2013-08-15</th>
+								<td>中山证券</th>
+						        <td><div style="overflow:hidden;height:20px;">林兴秋</div></th>
+								<td>3.00</th>
+								<td>4.27</th>
+								<td>5.42</th>
+								<td>7.06</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>--</th>
+							</tr>
+						    <tr>
+								<td>2013-08-15</th>
+								<td>联讯证券</th>
+						        <td><div style="overflow:hidden;height:20px;">罗柏言</div></th>
+								<td>3.00</th>
+								<td>4.45</th>
+								<td>6.13</th>
+								<td>7.36</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>--</th>
+							</tr>
+						    <tr>
+								<td>2013-08-15</th>
+								<td>兴业证券</th>
+						        <td><div style="overflow:hidden;height:20px;">徐佳熹,项军</div></th>
+								<td>3.00</th>
+								<td>4.37</th>
+								<td>5.07</th>
+								<td>5.92</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>--</th>
+							</tr>
+						    <tr>
+								<td>2013-08-14</th>
+								<td>华创证券</th>
+						        <td><div style="overflow:hidden;height:20px;">廖万国,张伟光</div></th>
+								<td>3.00</th>
+								<td>4.36</th>
+								<td>5.37</th>
+								<td>6.28</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>--</th>
+							</tr>
+						    <tr>
+								<td>2013-07-31</th>
+								<td>长江证券</th>
+						        <td><div style="overflow:hidden;height:20px;">刘舒畅,邹朋</div></th>
+								<td>3.00</th>
+								<td>4.61</th>
+								<td>6.05</th>
+								<td>7.85</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>--</th>
+							</tr>
+						    <tr>
+								<td>2013-07-31</th>
+								<td>东方证券</th>
+						        <td><div style="overflow:hidden;height:20px;">李淑花</div></th>
+								<td>3.00</th>
+								<td>4.48</th>
+								<td>5.71</th>
+								<td>6.95</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>--</th>
+							</tr>
+						    <tr>
+								<td>2013-07-25</th>
+								<td>光大证券</th>
+						        <td><div style="overflow:hidden;height:20px;">姚杰,江维娜</div></th>
+								<td>3.00</th>
+								<td>4.68</th>
+								<td>5.90</th>
+								<td>7.72</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>--</th>
+							</tr>
+						    <tr>
+								<td>2013-07-21</th>
+								<td>华创证券</th>
+						        <td><div style="overflow:hidden;height:20px;">廖万国,张伟光</div></th>
+								<td>3.00</th>
+								<td>4.36</th>
+								<td>5.37</th>
+								<td>6.28</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>--</th>
+							</tr>
+						    <tr>
+								<td>2013-07-18</th>
+								<td>国都证券</th>
+						        <td><div style="overflow:hidden;height:20px;">刘苗</div></th>
+								<td>3.00</th>
+								<td>4.28</th>
+								<td>5.92</th>
+								<td>7.71</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>--</th>
+							</tr>
+						    <tr>
+								<td>2013-07-10</th>
+								<td>东方证券</th>
+						        <td><div style="overflow:hidden;height:20px;">李淑花</div></th>
+								<td>3.00</th>
+								<td>4.48</th>
+								<td>5.71</th>
+								<td>6.95</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>--</th>
+							</tr>
+						    <tr>
+								<td>2013-06-21</th>
+								<td>国金证券</th>
+						        <td><div style="overflow:hidden;height:20px;">李敬雷,黄挺</div></th>
+								<td>3.00</th>
+								<td>4.71</th>
+								<td>6.21</th>
+								<td>8.09</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>--</th>
+							</tr>
+						    <tr>
+								<td>2013-06-20</th>
+								<td>华创证券</th>
+						        <td><div style="overflow:hidden;height:20px;">廖万国,张伟光</div></th>
+								<td>3.00</th>
+								<td>4.36</th>
+								<td>5.37</th>
+								<td>6.28</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>--</th>
+							</tr>
+						    <tr>
+								<td>2013-05-30</th>
+								<td>东方证券</th>
+						        <td><div style="overflow:hidden;height:20px;">李淑花</div></th>
+								<td>3.00</th>
+								<td>4.48</th>
+								<td>5.71</th>
+								<td>6.95</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>--</th>
+							</tr>
+						    <tr>
+								<td>2013-05-29</th>
+								<td>中信建投</th>
+						        <td><div style="overflow:hidden;height:20px;">吴斌,张明芳</div></th>
+								<td>3.00</th>
+								<td>4.50</th>
+								<td>5.35</th>
+								<td>6.33</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>--</th>
+							</tr>
+						    <tr>
+								<td>2013-05-28</th>
+								<td>华创证券</th>
+						        <td><div style="overflow:hidden;height:20px;">廖万国,张伟光</div></th>
+								<td>3.00</th>
+								<td>4.05</th>
+								<td>5.24</th>
+								<td>6.41</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>--</th>
+							</tr>
+						    <tr>
+								<td>2013-05-28</th>
+								<td>兴业证券</th>
+						        <td><div style="overflow:hidden;height:20px;">徐佳熹,项军</div></th>
+								<td>3.00</th>
+								<td>4.38</th>
+								<td>5.08</th>
+								<td>5.93</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>--</th>
+							</tr>
+						    <tr>
+								<td>2013-05-10</th>
+								<td>中原证券</th>
+						        <td><div style="overflow:hidden;height:20px;">罗敏</div></th>
+								<td>3.00</th>
+								<td>4.30</th>
+								<td>5.81</th>
+								<td>--</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>--</th>
+							</tr>
+						    <tr>
+								<td>2013-04-26</th>
+								<td>东方证券</th>
+						        <td><div style="overflow:hidden;height:20px;">李淑花</div></th>
+								<td>3.00</th>
+								<td>4.48</th>
+								<td>5.71</th>
+								<td>6.95</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>--</th>
+							</tr>
+						    <tr>
+								<td>2013-04-25</th>
+								<td>中信建投</th>
+						        <td><div style="overflow:hidden;height:20px;">吴斌,张明芳</div></th>
+								<td>3.00</th>
+								<td>4.17</th>
+								<td>5.17</th>
+								<td>6.24</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>--</th>
+							</tr>
+						    <tr>
+								<td>2013-04-25</th>
+								<td>招商证券</th>
+						        <td><div style="overflow:hidden;height:20px;">李珊珊,徐列海,张同,杨烨辉</div></th>
+								<td>3.00</th>
+								<td>4.24</th>
+								<td>5.38</th>
+								<td>6.45</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>--</th>
+							</tr>
+						    <tr>
+								<td>2013-04-25</th>
+								<td>长江证券</th>
+						        <td><div style="overflow:hidden;height:20px;">刘舒畅,邹朋</div></th>
+								<td>3.00</th>
+								<td>4.61</th>
+								<td>6.05</th>
+								<td>7.85</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>--</th>
+							</tr>
+						    <tr>
+								<td>2013-04-24</th>
+								<td>华创证券</th>
+						        <td><div style="overflow:hidden;height:20px;">廖万国,张伟光</div></th>
+								<td>3.00</th>
+								<td>4.05</th>
+								<td>5.24</th>
+								<td>6.41</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>--</th>
+							</tr>
+						    <tr>
+								<td>2013-03-26</th>
+								<td>华创证券</th>
+						        <td><div style="overflow:hidden;height:20px;">廖万国</div></th>
+								<td>3.00</th>
+								<td>4.05</th>
+								<td>5.24</th>
+								<td>6.41</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>--</th>
+							</tr>
+						    <tr>
+								<td>2013-03-26</th>
+								<td>中信建投</th>
+						        <td><div style="overflow:hidden;height:20px;">张明芳,崔文亮,林柏川</div></th>
+								<td>3.00</th>
+								<td>4.17</th>
+								<td>5.17</th>
+								<td>6.24</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>--</th>
+							</tr>
+						    <tr>
+								<td>2013-03-26</th>
+								<td>招商证券</th>
+						        <td><div style="overflow:hidden;height:20px;">徐列海,李珊珊,张同,杨烨辉</div></th>
+								<td>3.00</th>
+								<td>4.24</th>
+								<td>5.38</th>
+								<td>6.45</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>--</th>
+							</tr>
+						    <tr>
+								<td>2013-03-26</th>
+								<td>长江证券</th>
+						        <td><div style="overflow:hidden;height:20px;">刘舒畅,邹朋</div></th>
+								<td>3.00</th>
+								<td>4.28</th>
+								<td>5.61</th>
+								<td>7.27</th>
+								<td>--</th>
+								<td>--</th>
+						        <td>--</th>
+							</tr>
+						</tbody>
+						</table>
+
+						    </table>
+						</div>
+					</div>
+				</div>
+				<script type="text/javascript">
+				    tiny.tabSliding("rep-tab", "li", "at", "report-ylyc-cont", 1) 
+                </script>
+			</div>
+</div>
+
+		<div class="s6"></div>
+        <a name="pageAnchor"></a>
+        <a name="list"></a>
+		<div class="cnBox">
+			
+            <div class="box-tab">
+                    
+                    <div class="tabs">
+                        <div class="box">
+                            <div class="slider" style=" border:none;">
+                                <ul id="s1-tab">
+                                    <li class="at" style=" width:170px;">华兰生物(002007)研报明细</li>
+                                    <li style=" width:130px;">医药行业研报</li>
+                                    <li style=" width:160px;">医药行业个股盈利预测</li>
+                                </ul>
+				                    <div class="tipLinks" >
+					                    <b class="arr"></b>
+					                    <a href="http://data.eastmoney.com/zjlx/002007.html" class="link1" title="点击查看华兰生物实时资金流向">查看该股实时资金流向</a>
+					                    <a href="http://quotef10.eastmoney.com/F10_zlkp/sz002007.html" class="link1" title="点击查看华兰生物(002007)的控盘程度">控盘程度</a>
+					                    <a href="http://data.eastmoney.com/stockcomment/dianping.aspx?code=002007" class="link2" title="点击查看华兰生物(002007)的千股千评">千股千评</a>
+				</div>
+                            </div>
+                            <div class="content">
+				                <div class="report-list f14">
+					                <ul class="header">
+						                <li class="date">报告日期</li>
+						                <li class="type">评级类别</li>
+                                        <li class="change">评级变动</li>
+						                <li class="name">机构名称</li>
+						                <li class="titleL title" style="text-align:left;">研报</li>
+						                <li class="rank">机构影响力</li>
+					                </ul>
+					                		<ul>
+			<li class="date">2013-09-23</li>
+			<li class="type">买入</li>
+			<li class="change">无</li>
+			<li class="name"><a href="/report/56_0.html">德邦证券</a></li>
+			<li class="titleL title"><a href="/report/20130923/f7a191ee-cf4b-138f-f984-283943c7f5b3.html">血液制品，王者归来；单抗制品，新兵待发</a></li>
+			<li class="rank">★★</li>
+		</ul>
+		<ul>
+			<li class="date">2013-09-05</li>
+			<li class="type">增持</li>
+			<li class="change">首次</li>
+			<li class="name"><a href="/report/59_0.html">国泰君安</a></li>
+			<li class="titleL title"><a href="/report/20130905/b8f6da32-7dce-b449-28c3-f4ed3073c9bf.html">新格局，新空间</a></li>
+			<li class="rank">★★★★★</li>
+		</ul>
+		<ul>
+			<li class="date">2013-08-29</li>
+			<li class="type"></li>
+			<li class="change">无</li>
+			<li class="name"><a href="/report/56_0.html">德邦证券</a></li>
+			<li class="titleL title"><a href="/report/20130829/ba6ead93-eaa8-f39b-1ac7-8d716da69ac7.html">王者终将归来</a></li>
+			<li class="rank">★★</li>
+		</ul>
+		<ul>
+			<li class="date">2013-08-20</li>
+			<li class="type"></li>
+			<li class="change">无</li>
+			<li class="name"><a href="/report/121_0.html">中山证券</a></li>
+			<li class="titleL title"><a href="/report/20130820/98299f2b-bfd7-63d6-c9ec-ec726d79ba48.html">业绩增长态势良好，未来看点在开拓新血浆站</a></li>
+			<li class="rank">★★</li>
+		</ul>
+		<ul>
+			<li class="date">2013-08-17</li>
+			<li class="type">推荐</li>
+			<li class="change">维持</li>
+			<li class="name"><a href="/report/120_0.html">长城证券</a></li>
+			<li class="titleL title"><a href="/report/20130817/29aae410-5c61-eaa8-a289-ddfb7508e670.html">业绩向上趋势确立</a></li>
+			<li class="rank">★★★★</li>
+		</ul>
+
+		<ul class="splitline"></ul>
+		<ul>
+			<li class="date">2013-08-16</li>
+			<li class="type">增持</li>
+			<li class="change">维持</li>
+			<li class="name"><a href="/report/36_0.html">联讯证券</a></li>
+			<li class="titleL title"><a href="/report/20130816/88527418-e5c6-3453-8ee9-62ee05c6fd6d.html">血液制品业务收入、毛利率双增长，底部回升确立</a></li>
+			<li class="rank">★★★</li>
+		</ul>
+		<ul>
+			<li class="date">2013-08-15</li>
+			<li class="type">增持</li>
+			<li class="change">维持</li>
+			<li class="name"><a href="/report/57_0.html">东方证券</a></li>
+			<li class="titleL title"><a href="/report/20130815/ac47a7bd-3d1a-4674-7b33-b5164afa00d0.html">血制品业务拐点已确立</a></li>
+			<li class="rank">★★★★★</li>
+		</ul>
+		<ul>
+			<li class="date">2013-08-15</li>
+			<li class="type">增持</li>
+			<li class="change">维持</li>
+			<li class="name"><a href="/report/52_0.html">中信建投</a></li>
+			<li class="titleL title"><a href="/report/20130815/04b5e431-7f0c-26d3-ddbb-9fcb8d4ee49f.html">业绩符合预期，设立华兰基因与外企合作研究基因工程生物药</a></li>
+			<li class="rank">★★★★★</li>
+		</ul>
+		<ul>
+			<li class="date">2013-08-15</li>
+			<li class="type">推荐</li>
+			<li class="change">维持</li>
+			<li class="name"><a href="/report/97_0.html">华创证券</a></li>
+			<li class="titleL title"><a href="/report/20130815/2e2166b1-cd7b-cb93-7477-f84a751278e0.html">半年报靓丽，全年业绩高增长无忧</a></li>
+			<li class="rank">★★★★</li>
+		</ul>
+		<ul>
+			<li class="date">2013-08-15</li>
+			<li class="type">推荐</li>
+			<li class="change">维持</li>
+			<li class="name"><a href="/report/55_0.html">长江证券</a></li>
+			<li class="titleL title"><a href="/report/20130815/f2c7a840-f328-2491-2292-e5e221607060.html">血制品恢复增长，经营重回上升轨道</a></li>
+			<li class="rank">★★★★</li>
+		</ul>
+
+		<ul class="splitline"></ul>
+		<ul>
+			<li class="date">2013-08-15</li>
+			<li class="type">增持</li>
+			<li class="change">维持</li>
+			<li class="name"><a href="/report/94_0.html">兴业证券</a></li>
+			<li class="titleL title"><a href="/report/20130815/c47541c6-7ef6-c14f-dd41-e1cbee3cac78.html">血液制品增长较快，研发单抗布局未来</a></li>
+			<li class="rank">★★★★</li>
+		</ul>
+		<ul>
+			<li class="date">2013-08-15</li>
+			<li class="type">审慎推荐</li>
+			<li class="change">维持</li>
+			<li class="name"><a href="/report/122_0.html">招商证券</a></li>
+			<li class="titleL title"><a href="/report/20130815/19c7d121-6d24-6b3f-1028-5bbc96764cee.html">血制品业务表现靓丽，业绩反转明确</a></li>
+			<li class="rank">★★★★★</li>
+		</ul>
+		<ul>
+			<li class="date">2013-08-01</li>
+			<li class="type">推荐</li>
+			<li class="change">维持</li>
+			<li class="name"><a href="/report/55_0.html">长江证券</a></li>
+			<li class="titleL title"><a href="/report/20130801/818c1ad2-2acf-9eb7-784d-7149ec9c9e9d.html">逐步恢复元气，浆站仍有扩张能力</a></li>
+			<li class="rank">★★★★</li>
+		</ul>
+		<ul>
+			<li class="date">2013-07-31</li>
+			<li class="type">增持</li>
+			<li class="change">维持</li>
+			<li class="name"><a href="/report/57_0.html">东方证券</a></li>
+			<li class="titleL title"><a href="/report/20130731/769edede-0c5d-7d8b-f327-7aaeffa80bf5.html">血制品业务恢复，拐点已确立</a></li>
+			<li class="rank">★★★★★</li>
+		</ul>
+		<ul>
+			<li class="date">2013-07-26</li>
+			<li class="type">买入</li>
+			<li class="change">首次</li>
+			<li class="name"><a href="/report/58_0.html">光大证券</a></li>
+			<li class="titleL title"><a href="/report/20130726/e4a63afa-4b5a-78ea-d4aa-7b3f6d553ba9.html">行业壁垒构筑护城河，华兰内生外延双管齐下</a></li>
+			<li class="rank">★★★★★</li>
+		</ul>
+
+		<ul class="splitline"></ul>
+		<ul>
+			<li class="date">2013-07-22</li>
+			<li class="type">买入</li>
+			<li class="change">维持</li>
+			<li class="name"><a href="/report/79_0.html">国金证券</a></li>
+			<li class="titleL title"><a href="/report/20130722/29331041-e46d-c6d5-6110-41ea6b01aeef.html">长垣浆站正式运营，采浆能力持续提升</a></li>
+			<li class="rank">★★★★★</li>
+		</ul>
+		<ul>
+			<li class="date">2013-07-22</li>
+			<li class="type">推荐</li>
+			<li class="change">维持</li>
+			<li class="name"><a href="/report/97_0.html">华创证券</a></li>
+			<li class="titleL title"><a href="/report/20130722/f48d19fd-1c47-4101-107f-91ce61296ce7.html">长垣浆站如期获批采浆，河南浆站建设更进一步</a></li>
+			<li class="rank">★★★★</li>
+		</ul>
+		<ul>
+			<li class="date">2013-07-19</li>
+			<li class="type">强烈推荐</li>
+			<li class="change">首次</li>
+			<li class="name"><a href="/report/20_0.html">国都证券</a></li>
+			<li class="titleL title"><a href="/report/20130719/588c415a-0493-accf-cd26-3cb353dac6ee.html">华兰生物业绩拐点出现</a></li>
+			<li class="rank">★★★★</li>
+		</ul>
+		<ul>
+			<li class="date">2013-07-16</li>
+			<li class="type">买入</li>
+			<li class="change">维持</li>
+			<li class="name"><a href="/report/79_0.html">国金证券</a></li>
+			<li class="titleL title"><a href="/report/20130716/5b6da490-6153-a1e2-84ae-22bdbfcdd2f6.html">中报业绩超预期，看好后续发展</a></li>
+			<li class="rank">★★★★★</li>
+		</ul>
+		<ul>
+			<li class="date">2013-07-10</li>
+			<li class="type">增持</li>
+			<li class="change">维持</li>
+			<li class="name"><a href="/report/57_0.html">东方证券</a></li>
+			<li class="titleL title"><a href="/report/20130710/fb20b7ff-55d1-7074-b721-c0bb78bf399e.html">WHO预认证进展顺利，进军单抗领域</a></li>
+			<li class="rank">★★★★★</li>
+		</ul>
+
+		<ul class="splitline"></ul>
+		<ul>
+			<li class="date">2013-06-24</li>
+			<li class="type">买入</li>
+			<li class="change">维持</li>
+			<li class="name"><a href="/report/79_0.html">国金证券</a></li>
+			<li class="titleL title"><a href="/report/20130624/10c8870d-ab63-4bd1-0f0a-3ecdf168daa5.html">血制品成长确定，战略布局疫苗和单抗</a></li>
+			<li class="rank">★★★★★</li>
+		</ul>
+		<ul>
+			<li class="date">2013-06-21</li>
+			<li class="type">推荐</li>
+			<li class="change">维持</li>
+			<li class="name"><a href="/report/97_0.html">华创证券</a></li>
+			<li class="titleL title"><a href="/report/20130621/f5498a10-5ded-348d-b773-82653e1f6312.html">近三年增长确定，进军单抗业务提升估值</a></li>
+			<li class="rank">★★★★</li>
+		</ul>
+		<ul>
+			<li class="date">2013-06-03</li>
+			<li class="type">增持</li>
+			<li class="change">维持</li>
+			<li class="name"><a href="/report/57_0.html">东方证券</a></li>
+			<li class="titleL title"><a href="/report/20130603/78aac346-c17a-1eb7-faa9-5bd610798f89.html">股权激励助力公司长远发展</a></li>
+			<li class="rank">★★★★★</li>
+		</ul>
+		<ul>
+			<li class="date">2013-05-30</li>
+			<li class="type">买入</li>
+			<li class="change">维持</li>
+			<li class="name"><a href="/report/79_0.html">国金证券</a></li>
+			<li class="titleL title"><a href="/report/20130530/6d4738fd-0ea3-0574-6da1-d93b882d8bb9.html">股权激励行权条件偏低，预期业绩会更优化</a></li>
+			<li class="rank">★★★★★</li>
+		</ul>
+		<ul>
+			<li class="date">2013-05-29</li>
+			<li class="type"></li>
+			<li class="change">无</li>
+			<li class="name"><a href="/report/59_0.html">国泰君安</a></li>
+			<li class="titleL title"><a href="/report/20130529/7cbb5428-faaf-df09-9fde-3a065dc14150.html">股权激励推出，调动团队积极性</a></li>
+			<li class="rank">★★★★★</li>
+		</ul>
+
+		<ul class="splitline"></ul>
+		<div id="PageNav" class="PageNav">			<div class="Page" id="PageCont">
+		 <span class="at">1</span>
+		 <a target="_self" href="/report/002007_2.html#pageAnchor" title="转到第2页">2</a>
+		 <a target="_self" href="/report/002007_3.html#pageAnchor" title="转到第3页">3</a>
+		 <a target="_self" href="/report/002007_4.html#pageAnchor" title="转到第4页">4</a>
+		 <a target="_self" href="/report/002007_5.html#pageAnchor" title="转到第5页">5</a>
+		 <a target="_self" href="/report/002007_6.html#pageAnchor" title="转到第6页">6</a>
+		<a target="_self" href="/report/002007_2.html#pageAnchor" >下一页</a>
+			</div>
+		</div>
+
+				                </div>
+			                </div>
+                            <script type="text/javascript">
+                                tiny.tabSliding("s1-tab", "li", "at", "", "mouseover", function (num) {
+                                    var urlArr = ["",
+                                    "/report/002007.html#list",
+                                    "/report/hy,002007.html#list",
+                                    "/report/hyyl,002007.html#list"
+                                    ];
+                                    window.location.href = urlArr[num];
+                                }) 
+                            </script>
+                        </div>
+                    </div>
+            </div>
+			
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+    var _stockCode = "002007",_stockMarke = "2",_stockName = "华兰生物";
+    var url = "http://hqdigi2.eastmoney.com/EM_Quote2010NumericApplication/Index.aspx?Type=F&jsName=zjlx_hq&id=0020072";
+    var tableCache = '<table cellpadding="0" cellspacing="0" class="t1 ns1"><thead><tr><th>代码</th><th>名称</th><th>最新价</th><th>涨跌额</th><th>涨跌幅</th><th>振幅</th><th>成交量(手)</th><th>成交额(万)</th><th>昨收</th><th>今开</th><th>最高</th><th>最低</th><th>换手率</th><th>量比</th><th>市盈率</th><th>加自选</th></tr></thead><tbody><tr><td><a href="http://quote.eastmoney.com/{code}.html" target="_blank">{code}</a></td><td><a href="http://quote.eastmoney.com/{code}.html" target="_blank">{name}</a></td><td>{price}</td><td>{change}</td><td>{percent}</td><td><span>{zf}</span></td><td><span>{amount}</span></td><td><span>{volume}</span></td><td>{last}</td><td>{open}</td><td>{height}</td><td>{low}</td><td><span>{hsl}</span></td><td><span>{lb}</span></td><td><span>{syl}</span></td><td><a href="http://quote.eastmoney.com/favor/infavor.aspx?code={code}" title="将{code}({name})加为自选股"><img src="../images/add.gif"></a></td></tr></tbody></table>';
+    function hqUpdate() {
+        var a = url + "&rt=" + Math.floor((new Date().getTime()) / 30000);
+        var data, str;
+        var getColorStr = function (val, _val, _val1) {
+            if (isNaN(_val) || isNaN(_val1)) {
+                return "<span>" + val + "</span>";
+            }
+            if (parseFloat(_val) > _val1) {
+                val = "<span class=\"red\">" + val + "</span>";
+            } else if (parseFloat(_val) < _val1) {
+                val = "<span class=\"green\">" + val + "</span>";
+            } else {
+                val = "<span>" + val + "</span>";
+            }
+            return val;
+        }
+        tiny.loadJs(a, "utf-8",
+		function () {
+		    if (!(typeof zjlx_hq == "undefined" || zjlx_hq == null)) {
+		        data = zjlx_hq.quotation[0].split(',');
+
+		        if (data.length < 24) {
+		            data = [_stockCode, _stockCode, _stockName, "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", ]
+		        }
+
+		        str = tableCache.replace(/{code}/ig, data[1]);
+		        str = str.replace(/{name}/ig, data[2]);
+
+		        str = str.replace(/{price}/ig, getColorStr(data[5], data[10], 0));
+		        str = str.replace(/{change}/ig, getColorStr(data[10], data[10], 0));
+		        str = str.replace(/{percent}/ig, getColorStr(data[11], data[10], 0));
+		        str = str.replace(/{zf}/ig, data[13]);
+		        str = str.replace(/{amount}/ig, data[9]);
+		        str = str.replace(/{volume}/ig, data[8]);
+		        str = str.replace(/{last}/ig, getColorStr(data[3]));
+		        str = str.replace(/{open}/ig, getColorStr(data[4], data[4], data[3]));
+		        str = str.replace(/{height}/ig, getColorStr(data[6], data[6], data[3]));
+		        str = str.replace(/{low}/ig, getColorStr(data[7], data[7], data[3]));
+
+		        str = str.replace(/{hsl}/ig, data[23]);
+		        str = str.replace(/{lb}/ig, data[22]);
+		        str = str.replace(/{syl}/ig, (data[24] < 0 ? "--" : data[24]));
+
+		        $("zjlx_hqcont").innerHTML = str;
+		    }
+		}, true);
+    }
+    function hqInterval() { var b = new Date(); try { b = Eastmoney.Time.now() } catch (d) { } var c = parseInt(tiny.dateFormat(b, "HHmm") * 1); var a = b.getDay(); if (!(c <= 924 || (c >= 1145 && c <= 1259) || c >= 1515 || a > 5)) { try { hqUpdate(); } catch (d) { } } };
+    setInterval(hqUpdate, 10000);
+    hqUpdate();
+</script>
+<div id="footer">
+
+<div class="copyright">
+<br />
+<p>
+<input name="" onclick='copyToClipBoard()' type="button" value="点击此处复制本网址，可传给QQ/MSN上的好友" style="width:400px" />
+<script type="text/javascript" language="javascript">
+function copyToClipBoard(){
+var clipBoardContent="";
+clipBoardContent+=location.href;
+window.clipboardData.setData("Text",clipBoardContent);
+alert("复制成功，请粘贴到你的QQ/MSN上推荐给你的好友");
+}
+</script>
+</p>
+
+<div style="text-align:left;color:#666; padding:10px 0px 8px 0px; line-height:22px">
+郑重声明：东方财富网发布此信息目的在于传播更多信息，与本网站立场无关。东方财富网不保证该信息（包括但不限于文字、数据及图表）全部或者部分内容的准确性、真实性、完整性、有效性、及时性、原创性等。相关信息并未经过本网站证实，不对您构成任何投资建议，据此操作，风险自担。
+</div>
+<hr />
+<a href="javascript:;" onclick="javascript:this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.eastmoney.com/')" target="_self">将东方财富网设为上网首页吗？</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:;" onclick="javascript:window.external.AddFavorite('http://www.eastmoney.com/', '东方财富网——中国财经证券门户网站')" target="_self">将东方财富网添加到收藏夹吗？</a>
+<br />
+<br />
+<div class="contact" style="height:30px;line-height:30px;">
+	<a href="http://corp.eastmoney.com/aboutus/" target="_blank">关于我们</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://corp.eastmoney.com/Lianxi_guanggao.asp" target="_blank">广告服务</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://corp.eastmoney.com/contactus.html" target="_blank">联系我们</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://corp.eastmoney.com/zhaopin/zhaopin_1.asp" target="_blank">诚聘英才</a>&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="http://corp.eastmoney.com/lianxi_mianze.asp" target="_blank">免责声明</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://corp.eastmoney.com/Lianxi_falvshengming.asp" target="_blank">法律声明</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://corp.eastmoney.com/Lianxi_zhengao.asp" target="_blank">征稿启事</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://corp.eastmoney.com/media.asp" target="_blank">友情链接</a>
+	</div><br />
+  建议及投诉热线：021-54509980　值班热线：021-54509988-2345&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://corp.eastmoney.com/Lianxi_liuyan.asp" target="_blank"><img src="http://www.eastmoney.com/images/msg.gif" border="0" />意见与建议</a><br /><br />
+  证券投资咨询资质：上海东方财富证券研究所  编号：ZX0064<br /><br />
+<img src=" http://g1.dfcfw.com/g1/comm/icp.gif" border="0" alt="" />&nbsp;沪ICP证：沪B2-20070217&nbsp;&nbsp;版权所有：东方财富网
+<br />
+<p><a href="http://sh.cyberpolice.cn/" target="_blank"><img src="http://g1.dfcfw.com/g1/comm/police.gif" border="0" alt="" /></a></p>
+</div>
+
+<script>    _cpyno = "c1";</script>
+<script type="text/javascript" src="http://js4.eastmoney.com/counter.js?c=data"></script> 
+
+</div>
+<script type="text/javascript" src="http://js3.eastmoney.com/js/dcmap.js?mt=data_report_quote&odds=10"></script>
+</body>
+</html>
+
