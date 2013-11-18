@@ -12,7 +12,7 @@
       .css('width','340px');
     $('.gh-issue-key').css('font-size','28px');
     $('table.gh-print-page td').css('padding','0px');
-    $('.gh-issue-field.gh-issue-field-text.gh-issue-corner').css('width','20px');
+    $('.gh-issue-field.gh-issue-field-text.gh-issue-corner').css('width','40px');
   }
   window.withjQueryUI = function($){
     var cssText = '<style type=\'text/css\'>'
